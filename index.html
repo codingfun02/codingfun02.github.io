@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./css/styles.css">
+    <title>훈련 관리 프로그램</title>
+</head>
+<body>
+    <header class="header">
+        <h1>훈련 관리 프로그램</h1>
+    </header>
+    <main>
+        <article>
+            <ul class="main__training-list">
+                <li>훈련1</li>
+                <li>훈련2</li>
+                <li>훈련3</li>
+                <li>훈련4</li>
+            </ul>
+            <ul class="main__training-day-list">
+                <li>
+                    <details>
+                        <summary>30일 전</summary>
+                        <ul class="main__training-to-do-list">
+                            <li>
+                                <input type="checkbox">
+                                <span>1</span>
+                            </li>
+                            <li>
+                                <input type="checkbox">
+                                <span>2</span>
+                            </li>
+                            <li>
+                                <input type="checkbox">
+                                <span>3</span>
+                            </li>
+                            <li>
+                                <input type="checkbox">
+                                <span>4</span>
+                            </li>
+                            <li>
+                                <input type="checkbox">
+                                <span>5</span>
+                            </li>
+                        </ul>
+                    </details>
+                </li>
+                <li>
+                    <details>
+                        <summary>15일 전</summary>
+                        <ul class="main__training-to-do-list">
+                            <li>
+                                <input type="checkbox">
+                                <span>1</span>
+                            </li>
+                            <li>
+                                <input type="checkbox">
+                                <span>2</span>
+                            </li>
+                            <li>
+                                <input type="checkbox">
+                                <span>3</span>
+                            </li>
+                            <li>
+                                <input type="checkbox">
+                                <span>4</span>
+                            </li>
+                            <li>
+                                <input type="checkbox">
+                                <span>5</span>
+                            </li>
+                        </ul>
+                    </details>
+                </li>
+                <li>
+                    <details>
+                        <summary>12일 전</summary>
+                        <ul class="main__training-to-do-list">
+                            <li>
+                                <input type="checkbox">
+                                <span>1</span>
+                            </li>
+                            <li>
+                                <input type="checkbox">
+                                <span>2</span>
+                            </li>
+                            <li>
+                                <input type="checkbox">
+                                <span>3</span>
+                            </li>
+                            <li>
+                                <input type="checkbox">
+                                <span>4</span>
+                            </li>
+                            <li>
+                                <input type="checkbox">
+                                <span>5</span>
+                            </li>
+                        </ul>
+                    </details>
+                </li>
+                <li>
+                    <details>
+                        <summary>08일 전</summary>
+                        <ul class="main__training-to-do-list">
+                            <li>
+                                <input type="checkbox">
+                                <span>1</span>
+                            </li>
+                            <li>
+                                <input type="checkbox">
+                                <span>2</span>
+                            </li>
+                            <li>
+                                <input type="checkbox">
+                                <span>3</span>
+                            </li>
+                            <li>
+                                <input type="checkbox">
+                                <span>4</span>
+                            </li>
+                            <li>
+                                <input type="checkbox">
+                                <span>5</span>
+                            </li>
+                        </ul>
+                    </details>
+                </li>
+                <li>
+                    <details>
+                        <summary>04일 전</summary>
+                        <ul class="main__training-to-do-list">
+                            <li>
+                                <input type="checkbox">
+                                <span>1</span>
+                            </li>
+                            <li>
+                                <input type="checkbox">
+                                <span>2</span>
+                            </li>
+                            <li>
+                                <input type="checkbox">
+                                <span>3</span>
+                            </li>
+                            <li>
+                                <input type="checkbox">
+                                <span>4</span>
+                            </li>
+                            <li>
+                                <input type="checkbox">
+                                <span>5</span>
+                            </li>
+                        </ul>
+                    </details>
+                </li>
+                <li>
+                    <details>
+                        <summary>01일 전</summary>
+                        <ul class="main__training-to-do-list">
+                            <li>
+                                <input type="checkbox">
+                                <span>1</span>
+                            </li>
+                            <li>
+                                <input type="checkbox">
+                                <span>2</span>
+                            </li>
+                            <li>
+                                <input type="checkbox">
+                                <span>3</span>
+                            </li>
+                            <li>
+                                <input type="checkbox">
+                                <span>4</span>
+                            </li>
+                            <li>
+                                <input type="checkbox">
+                                <span>5</span>
+                            </li>
+                        </ul>
+                    </details>
+                </li>
+            </ul>
+            <button class="g-btn main__training-download-btn">일정 TXT 파일 다운로드</button>
+        </article>
+        <div class="main__line"></div>
+        <article>
+            <form class="main__add-training-form">
+                <input type="text" placeholder="훈련 이름">
+                <input type="text" placeholder="훈련 날짜">
+                <button class="g-btn">추가</button>
+            </form>
+            <form class="main__add-training-to-do-file-form">
+                <div>
+                    <span>일정 TXT 파일</span>
+                    <label class="main__add-training-to-do-file-form-txt-file-label" for="txt-file">파일 찾기</label>
+                    <input type="file" accept=".txt" class="js-trainingFileInput" id="txt-file">
+                </div>
+                <div>
+                    <div>일정 선택 O TXT 파일 예시</div>
+                    <a href="sample_txt/sample-can.txt" download>다운로드</a>
+                </div>
+                <div>
+                    <div>일정 선택 X TXT 파일 예시</div>
+                    <a href="sample_txt/sample-cannot.txt" download>다운로드</a>
+                </div>
+            </form>
+        </article>
+    </main>
+    <script type="module" src="./js/main.mjs"></script>
+    <script type="module" src="./js/trainingFile.mjs"></script>
+</body>
+</html>

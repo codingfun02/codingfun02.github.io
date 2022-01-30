@@ -1,0 +1,29 @@
+{
+  "name": "barn",
+  "main": "dist/barn.min.js",
+  "version": "0.2.3",
+  "homepage": "https://github.com/arokor/barn",
+  "authors": [
+    "Aron Kornhall <aron@kornhall.se>"
+  ],
+  "description": "Fast, atomic persistent storage layer on top of localstorage",
+  "moduleType": [
+    "amd",
+    "globals",
+    "node"
+  ],
+  "keywords": [
+    "persistence"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "demo",
+    "index.js",
+    "lib",
+    "Gruntfile"
+  ]
+}

@@ -1,0 +1,1 @@
+const trainingFileInput = document.querySelector(".js-trainingFileInput");

@@ -1,0 +1,129 @@
+main {
+    height: calc(100% - 60px);
+    padding: 15px 0;
+    display: flex;
+    align-items: center;
+    font-size: 32px;
+}
+
+.g-btn {
+    all: unset;
+    height: 50px;
+    border-radius: 5px;
+    background-color: #27ae60;
+    font-size: 30px;
+    text-align: center;
+    cursor: pointer;
+}
+
+main article:first-of-type {
+    position: relative;
+    width: 50%;
+    height: 85%;
+    padding-left: 15px;
+    padding-right: 40px;
+    display: flex;
+    justify-content: space-between;
+}
+
+main article:nth-of-type(2) {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px 0;
+}
+
+.main__training-list li {
+    margin-bottom: 5px;
+    cursor: pointer;
+}
+
+.main__training-list li:hover {
+    color: #0652dd;
+}
+
+.main__training-day-list li {
+    margin-bottom: 10px;
+}
+
+.main__training-day-list summary {
+    cursor: pointer;
+}
+
+.main__training-download-btn {
+    position: absolute;
+    bottom: 0;
+    right: 40px;
+    width: 320px;
+}
+
+.main__training-to-do-list {
+    padding: 5px 0 10px 10px;
+}
+
+.main__training-to-do-list input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+}
+
+main form {
+    width: 570px;
+    padding: 60px 70px;
+    border-radius: 5px;
+    background-color: #ecececde;
+}
+
+.main__add-training-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.main__add-training-form input {
+    height: 50px;
+    padding: 5px 4px;
+    font-size: 30px;
+    margin-bottom: 4px;
+}
+
+.main__add-training-form input:last-of-type {
+    margin-bottom: 10px;
+}
+
+.main__add-training-to-do-file-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px 0;
+    font-size: 28px;
+}
+
+.main__add-training-to-do-file-form div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main__add-training-to-do-file-form input[type="file"] {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+}
+
+.main__add-training-to-do-file-form-txt-file-label {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 110px;
+    height: 35px;
+    border-radius: 4px;
+    background-color: #27ae60;
+    font-size: 23px;
+    cursor: pointer;
+}
+
+.main__line {
+    width: 0;
+    height: 90%;
+    border: 1px solid #e2e2e2;
+}
