@@ -36,12 +36,38 @@ main article:nth-of-type(2) {
 }
 
 .main__training-list li {
+    display: flex;
+    height: 30px;
     margin-bottom: 5px;
     cursor: pointer;
 }
 
-.main__training-list li:hover {
+.main__training-list li span {
+    margin-right: 15px;
+}
+
+.main__training-list li span:hover {
     color: #0652dd;
+}
+
+.trainingNameSpanSelected,
+.trainingDayDDay {
+    color: #4834d4;
+}
+
+.main__training-list li button {
+    all: unset;
+    font-size: 28px;
+}
+
+.main__training-list li button:hover {
+    color: #27ae60;
+}
+
+.main__training-day-list {
+    height: 85%;
+    padding-right: 20px;
+    overflow-y: scroll;
 }
 
 .main__training-day-list li {
@@ -78,6 +104,19 @@ main form {
 .main__add-training-form {
     display: flex;
     flex-direction: column;
+}
+
+.trainingDataAddedSpan {
+    width: 70px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 8px;
+    border-radius: 6px;
+    background-color: #3498db;
+    font-size: 22px;
+    color: white;
 }
 
 .main__add-training-form input {
