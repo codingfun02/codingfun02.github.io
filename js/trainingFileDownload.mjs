@@ -36,8 +36,9 @@ function parseTrainingDay(trainingDay) {
 function handleTrainingDownloadBtnClick() {
     const selectedTrainingSpan = document.getElementsByClassName(TRAINING_NAME_SPAN_SELECTED_CLASS_NAME)[0];
     if (selectedTrainingSpan) {
-        const li = selectedTrainingSpan.parentElement;
-        const trainingId = li.dataset.trainingId;
+        const div = selectedTrainingSpan.parentElement;
+        const li = div.parentElement;
+        const trainingId = Number(li.dataset.trainingId);
         const training = manageTrainings.trainings[trainingId];
         const trainingDays = training.days;
         let trainingData = "";
