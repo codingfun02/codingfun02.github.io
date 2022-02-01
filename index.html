@@ -12,9 +12,13 @@
     </header>
     <main>
         <article>
-            <ul class="main__training-list js-trainingList"></ul>
-            <ul class="main__training-day-list js-trainingDayList"></ul>
-            <button class="g-btn main__training-download-btn js-trainingDownloadBtn">일정 TXT 파일 다운로드</button>
+            <ul class="main__training-list js-trainingList">
+                <ul class="main__training-day-list js-trainingDayList"></ul>
+            </ul>
+            <div class="main__training-btn-container">
+                <button class="g-btn main__training-print-btn js-trainingPrintBtn">할 일 인쇄하기</button>
+                <button class="g-btn main__training-download-btn js-trainingDownloadBtn">일정 TXT 파일 다운로드</button>
+            </div>
         </article>
         <div class="main__line"></div>
         <article>
@@ -43,6 +47,7 @@
             </form>
         </article>
     </main>
+    <script type="module" src="js/trainingPrint.mjs"></script>
     <script type="module" src="./js/trainingFileDownload.mjs"></script>
     <script type="module" src="./js/manageSetTrainingDays.mjs"></script>
     <script type="module" src="./js/manageTrainings.mjs"></script>

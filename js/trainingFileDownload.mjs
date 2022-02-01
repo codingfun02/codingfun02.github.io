@@ -2,8 +2,8 @@ import manageTrainings from "./manageTrainings.mjs";
 
 const trainingDownloadBtn = document.querySelector(".js-trainingDownloadBtn");
 
-const TRAINING_NAME_SPAN_SELECTED_CLASS_NAME = "trainingNameSpanSelected";
-const TRAINING_FILENAME = "훈련 데이터",
+const TRAINING_NAME_SPAN_SELECTED_CLASS_NAME = "trainingNameSpanSelected",
+    TRAINING_FILENAME = "훈련 데이터",
     TRAINING_FILE_TYPE = "text/plain";
 
 function downloadFile(data, filename, type) {

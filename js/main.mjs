@@ -9,7 +9,8 @@ const addTrainingForm = document.querySelector(".js-addTrainingForm"),
 
 const TRAINING_NAME_SPAN_CLASS_NAME = "trainingNameSpan",
     TRAINING_DAY_DDAY_CLASS_NAME = "trainingDayDDay",
-    TRAINING_NAME_SPAN_SELECTED_CLASS_NAME = "trainingNameSpanSelected";
+    TRAINING_NAME_SPAN_SELECTED_CLASS_NAME = "trainingNameSpanSelected",
+    HIDDEN_CLASS_NAME = "hidden";
 
 function repaint() {
     trainingList.innerHTML = "";
@@ -56,6 +57,7 @@ function trainingToDoChecked(event) {
 function paintTrainingDay(trainingDay, trainingDDayString, trainingNumber, trainingDayNumber) {
     const li1 = document.createElement("li");
     const details = document.createElement("details");
+    details.open = true;
     const summary = document.createElement("summary");
     const trainingDayText = trainingDay.text;
     summary.innerText = trainingDayText;
@@ -84,11 +86,15 @@ function paintTrainingDay(trainingDay, trainingDDayString, trainingNumber, train
     details.appendChild(ul);
     li1.appendChild(details);
     trainingDayList.appendChild(li1);
+    
 }
 
 function handleTrainingSpanClick(event) {
     const target = event.target;
-    const li = target.parentElement;
+    const div = target.parentElement;
+    const li = div.parentElement;
+    trainingDayList.classList.remove(HIDDEN_CLASS_NAME);
+    li.appendChild(trainingDayList);
     const trainingId = Number(li.dataset.trainingId);
     const trainingDDayString = li.dataset.dDayString;
     const spans = trainingList.getElementsByClassName(TRAINING_NAME_SPAN_CLASS_NAME);
@@ -99,6 +105,7 @@ function handleTrainingSpanClick(event) {
     trainingDayList.innerHTML = "";
     const trainingDays = manageTrainings.trainings[trainingId].days;
     trainingDays.forEach((trainingDay, trainingDayIndex) => paintTrainingDay(trainingDay, trainingDDayString, trainingId, trainingDayIndex));
+    trainingList.scroll(0, 0);
 }
 
 function handleTrainingDelBtnClick(event) {
@@ -123,6 +130,7 @@ function paintTraining(training, index) {
     const li = document.createElement("li");
     li.dataset.trainingId = index;
     li.dataset.dDayString = dDayString;
+    const div = document.createElement("div");
     const span = document.createElement("span");
     span.classList.add(TRAINING_NAME_SPAN_CLASS_NAME);
     span.innerText = `${trainingName}(${trainingMonth}.${trainingDay}) ${dDayString}`;
@@ -130,8 +138,9 @@ function paintTraining(training, index) {
     const delBtn = document.createElement("button");
     delBtn.innerHTML = "<i class='fas fa-trash-alt'></i>";
     delBtn.addEventListener("click", handleTrainingDelBtnClick);
-    li.appendChild(span);
-    li.appendChild(delBtn);
+    div.appendChild(span);
+    div.appendChild(delBtn);
+    li.appendChild(div);
     trainingList.appendChild(li);
 }
 
@@ -163,6 +172,7 @@ function handleAddTrainingFormSubmit(event) {
     trainingDateInput.value = "";
 }
 
+trainingDayList.classList.add(HIDDEN_CLASS_NAME);
 manageTrainings.loadTrainings();
 manageSetTrainingDays.loadSetTrainingDays();
 manageTrainings.trainings.forEach((training, index) => {

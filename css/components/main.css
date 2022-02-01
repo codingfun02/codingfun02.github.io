@@ -19,11 +19,9 @@ main {
 main article:first-of-type {
     position: relative;
     width: 50%;
-    height: 85%;
     padding-left: 15px;
     padding-right: 40px;
-    display: flex;
-    justify-content: space-between;
+    align-self: flex-start;
 }
 
 main article:nth-of-type(2) {
@@ -35,18 +33,22 @@ main article:nth-of-type(2) {
     gap: 40px 0;
 }
 
+.main__training-list {
+    height: 520px;
+    overflow-y: scroll;
+}
+
 .main__training-list li {
-    display: flex;
-    height: 30px;
-    margin-bottom: 5px;
     cursor: pointer;
 }
 
-.main__training-list li span {
-    margin-right: 15px;
+.main__training-list li div {
+    display: flex;
+    align-items: flex-start;
+    gap: 0 10px;
 }
 
-.main__training-list li span:hover {
+.main__training-list li div span:hover {
     color: #0652dd;
 }
 
@@ -55,43 +57,43 @@ main article:nth-of-type(2) {
     color: #4834d4;
 }
 
-.main__training-list li button {
+.main__training-list li div button {
     all: unset;
     font-size: 28px;
 }
 
-.main__training-list li button:hover {
+.main__training-list li div button:hover {
     color: #27ae60;
 }
 
 .main__training-day-list {
-    height: 85%;
-    padding-right: 20px;
-    overflow-y: scroll;
-}
-
-.main__training-day-list li {
-    margin-bottom: 10px;
+    margin-bottom: 15px;
+    padding-left: 36px;
+    margin-top: 13px;
+    font-size: 15px;
 }
 
 .main__training-day-list summary {
     cursor: pointer;
 }
 
-.main__training-download-btn {
-    position: absolute;
-    bottom: 0;
-    right: 40px;
-    width: 320px;
+.main__training-btn-container {
+    position: fixed;
+    bottom: 75px;
+    right: calc(50% + 40px);
+}
+
+.main__training-btn-container button {
+    padding: 1px 20px;
 }
 
 .main__training-to-do-list {
-    padding: 5px 0 10px 10px;
+    padding: 5px 0 10px 32px;
 }
 
 .main__training-to-do-list input[type="checkbox"] {
-    width: 18px;
-    height: 18px;
+    width: 13px;
+    height: 13px;
 }
 
 main form {
